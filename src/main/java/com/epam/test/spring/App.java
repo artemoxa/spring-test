@@ -14,8 +14,6 @@ public class App {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("beans.xml");
 
-        ApplicationContext context2 =
-                new ClassPathXmlApplicationContext("beans.xml");
 
         Human citizen = context.getBean("citizen", Citizen.class);
         citizen.speak();
@@ -32,12 +30,8 @@ public class App {
         Project project = context.getBean("project", Project.class);
         System.out.println(project.toString());
 
-        Project project2 = context.getBean("project", Project.class);
-        System.out.println(project2.toString());
-
-        project2.name = "kek";
-        System.out.println(project2.toString());
-        System.out.println(project == project2);
+        Manager manager2 = context.getBean("manager2", Manager.class);
+        System.out.println(manager2.toString());
 
 
     }

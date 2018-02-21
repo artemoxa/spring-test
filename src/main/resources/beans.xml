@@ -27,12 +27,25 @@
 
     <bean id="manager" class="com.epam.test.spring.Manager">
         <constructor-arg value="Dima"/>
+        <property name="emailAdresses" ref="emailAdresses"/>
     </bean>
 
     <bean id="project" class="com.epam.test.spring.Project">
         <constructor-arg value="GoogleMaps"/>
         <constructor-arg ref="manager"/>
     </bean>
+
+    <bean id="manager2" class="com.epam.test.spring.Manager">
+        <constructor-arg value="Petya"/>
+        <property name="emailAdresses" >
+            <list>
+                <value type="java.lang.String">email1</value>
+                <value type="java.lang.String">email2</value>
+                <value type="java.lang.String">email3</value>
+            </list>
+        </property>
+    </bean>
+
 
     <util:list id="emailAdresses" list-class="java.util.ArrayList">
         <value>artemoxa0@gmail.com</value>
