@@ -1,16 +1,42 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean id="citizen" class="com.epam.test.spring.Citizen"></bean>
+
     <bean id="superman" class="com.epam.test.spring.SuperMan"></bean>
+
     <bean id="javadev" class="com.epam.test.spring.Developer">
         <property name="name" value="Alex"/>
         <property name="skill" value="Java"/>
         <property name="likeCoffee" value="true"/>
         <property name="workPlace" value="Brest"/>
     </bean>
+
+    <bean id="javadev1" class="com.epam.test.spring.Developer">
+        <constructor-arg name="name" value="Mike"/>
+        <constructor-arg name="skill" value="Java"/>
+        <constructor-arg name="likeCoffee" value="false"/>
+        <constructor-arg name="workPlace" value="doma"/>
+    </bean>
+
+    <bean id="manager" class="com.epam.test.spring.Manager">
+        <constructor-arg value="Dima"/>
+    </bean>
+
+    <bean id="project" class="com.epam.test.spring.Project">
+        <constructor-arg value="GoogleMaps"/>
+        <constructor-arg ref="manager"/>
+    </bean>
+
+    <util:list id="emailAdresses" list-class="java.util.ArrayList">
+        <value>artemoxa0@gmail.com</value>
+        <value>kek@kok.ru</value>
+    </util:list>
 
 </beans>

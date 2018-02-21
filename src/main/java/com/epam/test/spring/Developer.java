@@ -7,6 +7,16 @@ public class Developer {
     String workPlace;
     boolean likeCoffee;
 
+    public Developer() {
+    }
+
+    public Developer(String name, String skill, String workPlace, boolean likeCoffee) {
+        this.name = name;
+        this.skill = skill;
+        this.workPlace = workPlace;
+        this.likeCoffee = likeCoffee;
+    }
+
     public String getName() {
         return name;
     }
