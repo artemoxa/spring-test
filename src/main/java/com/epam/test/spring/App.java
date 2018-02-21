@@ -19,5 +19,8 @@ public class App {
 
         Human superman = context.getBean("superman", SuperMan.class);
         superman.speak();
+
+        Developer javaDev = context.getBean("javadev", Developer.class);
+        System.out.printf(javaDev.toString());
     }
 }

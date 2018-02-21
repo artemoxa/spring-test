@@ -6,5 +6,11 @@
 
     <bean id="citizen" class="com.epam.test.spring.Citizen"></bean>
     <bean id="superman" class="com.epam.test.spring.SuperMan"></bean>
+    <bean id="javadev" class="com.epam.test.spring.Developer">
+        <property name="name" value="Alex"/>
+        <property name="skill" value="Java"/>
+        <property name="likeCoffee" value="true"/>
+        <property name="workPlace" value="Brest"/>
+    </bean>
 
 </beans>
