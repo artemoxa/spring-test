@@ -33,6 +33,8 @@ public class App {
         Manager manager2 = context.getBean("manager2", Manager.class);
         System.out.println(manager2.toString());
 
+        Singleton singleton = context.getBean("singleton", Manager.class);
+        System.out.println(singleton.toString());
 
     }
 }

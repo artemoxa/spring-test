@@ -52,4 +52,6 @@
         <value>kek@kok.ru</value>
     </util:list>
 
+    <bean id="singleton" class="com.epam.test.spring.Singleton" factory-method="getInstance"/>
+
 </beans>
